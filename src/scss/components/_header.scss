@@ -4,12 +4,14 @@
   background-position: right center;
   background-repeat: no-repeat;
   background-size: cover;
+  color: $color-white;
 
   .nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-inline: 40px;
+    padding-inline: 48px;
+    padding-top: 32px;
 
     img {
       max-width: 128px;
@@ -21,10 +23,11 @@
     }
 
     &__link {
-      @include font-sans($bold, $sm, $normal, $color-white);
+      @include font-sans($bold, $sm, $normal);
       text-transform: uppercase;
       padding-left: 16px;
       transition: color 0.2s;
+      color: $color-white;
 
       &:hover {
         color: $color-secondary;
@@ -39,16 +42,16 @@
     margin-left: 48px;
 
     &__welcome {
-      margin-top: 64px;
+      margin-top: 72px;
       color: $color-white;
     }
 
     &__title {
-      @include font-cursiva($h2, $color-white)
+      @include font-cursiva($h2)
     }
 
     &__slogan {
-      @include font-sans($light, $lg, $italic, $color-white)
+      @include font-sans($light, $lg, $italic)
     }
   }
 }

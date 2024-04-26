@@ -43,18 +43,16 @@ $container-x-small: 375px;
   @return calc($pixel / $context)+rem;
 }
 
-@mixin font-cursiva($size, $color) {
+@mixin font-cursiva($size) {
   font-family: $font-cursive;
   font-weight: 400;
   font-size: rem($size);
   font-style: normal;
-  color: $color;
 }
 
-@mixin font-sans($weight, $size, $style, $color) {
+@mixin font-sans($weight, $size, $style) {
   font-family: $font-sans;
   font-weight: $weight;
   font-size: rem($size);
   font-style: $style;
-  color: $color;
 }
