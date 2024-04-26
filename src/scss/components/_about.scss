@@ -20,9 +20,14 @@
     align-items: center;
     gap: 32px;
     justify-content: space-between;
+
+    @media screen and (min-width: 300px) and (max-width: 768px) {
+      flex-direction: column;
+    }
   }
 
   &__description {
+    order: 0;
     max-width: 60%;
 
     p {
@@ -31,13 +36,24 @@
       line-height: 24px;
       text-align: center;
     }
+
+    @media screen and (min-width: 300px) and (max-width: 768px) {
+      order: 1;
+      max-width: 100%;
+    }
   }
 
   &__image {
+    order: 1;
     max-width: 30%;
 
     img {
       border-radius: 100%;
+    }
+
+    @media screen and (min-width: 300px) and (max-width: 768px) {
+      order: 0;
+      max-width: 80%;
     }
   }
 

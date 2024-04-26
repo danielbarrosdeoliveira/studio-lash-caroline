@@ -16,12 +16,25 @@
     img {
       max-width: 128px;
     }
+
+    @media screen and (min-width: 300px) and (max-width: 768px) {
+      flex-direction: column;
+
+      img {
+        max-width: 256px;
+      }
+    }
   }
 
   &__list {
     display: flex;
     align-items: center;
     gap: 8px;
+
+    @media screen and (min-width: 300px) and (max-width: 768px) {
+      margin-top: 32px;
+    }
+
   }
 
   &__link {
@@ -33,6 +46,11 @@
 
     &:hover {
       color: $color-secondary;
+    }
+
+    @media screen and (min-width: 300px) and (max-width: 768px) {
+      @include font-sans($bold, $lg, $normal);
+
     }
   }
 
@@ -47,27 +65,31 @@
       background-color: $color-primary;
       border-radius: 8px;
     }
+
+    @media screen and (min-width: 300px) and (max-width: 768px) {
+      display: none;
+    }
   }
 
-  .presentation {
+  &__presentation {
     display: flex;
     height: 80%;
     flex-direction: column;
     justify-content: center;
     gap: 32px;
     margin-left: 48px;
+  }
 
-    &__welcome {
-      margin-top: 72px;
-      color: $color-white;
-    }
+  &__welcome {
+    margin-top: 72px;
+    color: $color-white;
+  }
 
-    &__title {
-      @include font-cursiva($h2)
-    }
+  &__title {
+    @include font-cursiva($h2)
+  }
 
-    &__slogan {
-      @include font-sans($light, $lg, $italic)
-    }
+  &__slogan {
+    @include font-sans($light, $lg, $italic)
   }
 }
