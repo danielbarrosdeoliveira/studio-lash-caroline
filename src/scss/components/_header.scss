@@ -1,4 +1,4 @@
-#header {
+.header {
   height: 100vh;
   background-image: url("../../assets/images/presentation.jpg");
   background-position: right center;
@@ -6,7 +6,7 @@
   background-size: cover;
   color: $color-white;
 
-  .nav {
+  &__nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -16,28 +16,44 @@
     img {
       max-width: 128px;
     }
+  }
 
-    &__list {
-      display: flex;
-      gap: 8px;
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  &__link {
+    @include font-sans($bold, $sm, $normal);
+    text-transform: uppercase;
+    padding-left: 16px;
+    transition: color 0.2s;
+    color: $color-white;
+
+    &:hover {
+      color: $color-secondary;
     }
+  }
 
-    &__link {
-      @include font-sans($bold, $sm, $normal);
-      text-transform: uppercase;
-      padding-left: 16px;
-      transition: color 0.2s;
-      color: $color-white;
+  &__call-to-action {
+    color: $color-white;
+    border: 2px solid $color-primary;
+    padding: 16px;
+    transition: .3s;
+    margin-left: 8px;
 
-      &:hover {
-        color: $color-secondary;
-      }
+    &:hover {
+      background-color: $color-primary;
+      border-radius: 8px;
     }
   }
 
   .presentation {
     display: flex;
+    height: 80%;
     flex-direction: column;
+    justify-content: center;
     gap: 32px;
     margin-left: 48px;
 

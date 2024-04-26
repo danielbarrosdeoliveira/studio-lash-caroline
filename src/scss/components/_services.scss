@@ -82,4 +82,19 @@
       }
     }
   }
+
+  &__call-to-action {
+    color: $color-white;
+    border: 2px solid $color-secondary;
+    padding: 16px;
+    transition: .3s;
+    margin: 64px auto 0 auto;
+    max-width: 154px;
+
+    &:hover {
+      color: $color-black;
+      background-color: $color-secondary;
+      border-radius: 8px;
+    }
+  }
 }

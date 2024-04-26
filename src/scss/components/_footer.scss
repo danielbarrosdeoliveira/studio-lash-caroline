@@ -1,0 +1,46 @@
+.footer {
+  background: $color-black;
+  padding-block: 64px;
+  color: $color-white;
+
+  &__container {
+    @include container;
+
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    max-width: 256px;
+  }
+
+  &__contact {
+    li {
+      margin-bottom: 16px;
+
+      a {
+        @include font-sans($bold, $h8, $normal);
+        color: $color-white;
+      }
+    }
+  }
+
+  &__copy {
+
+    display: flex;
+    justify-content: center;
+
+    @include container;
+    gap: 4px;
+    margin-top: 32px;
+
+    a {
+      color: $color-primary;
+      transition: color 0.3s;
+
+      &:hover {
+        color: $color-purple;
+      }
+    }
+  }
+}
