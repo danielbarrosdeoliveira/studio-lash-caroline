@@ -53,8 +53,16 @@
 
     ul {
       margin-top: 16px;
+    }
 
+    @media screen and (min-width: 576px) and (max-width: 1080px) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      justify-content: space-evenly;
+    }
 
+    @media screen and (min-width: 300px) and (max-width: 575.9px) {
+      flex-direction: column;
     }
   }
 

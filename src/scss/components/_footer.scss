@@ -12,6 +12,11 @@
 
   &__logo {
     max-width: 256px;
+
+    @media screen and (min-width: 300px) and (max-width: 768px) {
+      max-width: 200px;
+      margin-bottom: 32px;
+    }
   }
 
   &__contact {
@@ -21,12 +26,17 @@
       a {
         @include font-sans($bold, $h8, $normal);
         color: $color-white;
+
+        @media screen and (min-width: 300px) and (max-width: 768px) {
+          @include font-sans($bold, $xl, $normal);
+        }
       }
     }
+
+
   }
 
   &__copy {
-
     display: flex;
     justify-content: center;
 
@@ -43,4 +53,6 @@
       }
     }
   }
+
+
 }

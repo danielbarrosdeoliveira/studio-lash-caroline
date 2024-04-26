@@ -18,10 +18,12 @@
     }
 
     @media screen and (min-width: 300px) and (max-width: 768px) {
+      padding-inline: 24px;
+      padding-top: 16px;
       flex-direction: column;
 
       img {
-        max-width: 256px;
+        max-width: 172px;
       }
     }
   }
@@ -31,10 +33,13 @@
     align-items: center;
     gap: 8px;
 
-    @media screen and (min-width: 300px) and (max-width: 768px) {
-      margin-top: 32px;
+    @media screen and (min-width: 300px) and (max-width: 480px) {
+      margin-top: 16px;
     }
 
+    @media screen and (min-width: 480px) and (max-width: 767.9px) {
+      margin-top: 24px;
+    }
   }
 
   &__link {
@@ -48,9 +53,11 @@
       color: $color-secondary;
     }
 
-    @media screen and (min-width: 300px) and (max-width: 768px) {
-      @include font-sans($bold, $lg, $normal);
 
+
+    @media screen and (min-width: 300px) and (max-width: 479.9px) {
+      @include font-sans($bold, $sm, $normal);
+      padding-inline: 8px;
     }
   }
 
@@ -66,7 +73,7 @@
       border-radius: 8px;
     }
 
-    @media screen and (min-width: 300px) and (max-width: 768px) {
+    @media screen and (min-width: 300px) and (max-width: 480px) {
       display: none;
     }
   }
@@ -86,10 +93,14 @@
   }
 
   &__title {
-    @include font-cursiva($h2)
+    @include font-cursiva($h2);
+
+    @media screen and (min-width: 300px) and (max-width: 480px) {
+      @include font-cursiva($h4);
+    }
   }
 
   &__slogan {
-    @include font-sans($light, $lg, $italic)
+    @include font-sans($light, $lg, $italic);
   }
 }
