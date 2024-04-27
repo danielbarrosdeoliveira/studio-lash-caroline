@@ -1,6 +1,6 @@
 .footer {
   background: $color-black;
-  padding-block: 64px;
+  padding-block: 64px 16px;
   color: $color-white;
 
   &__container {
@@ -8,6 +8,21 @@
 
     display: flex;
     justify-content: space-between;
+    align-items: center;
+
+    @media screen and (min-width: 300px) and (max-width: 979.9px) {
+      flex-direction: column;
+
+      iframe {
+        margin-top: 32px;
+      }
+    }
+
+    iframe {
+      @media screen and (min-width: 300px) and (max-width: 499.9px) {
+        max-width: 300px;
+      }
+    }
   }
 
   &__logo {
@@ -21,7 +36,7 @@
 
   &__contact {
     li {
-      margin-bottom: 16px;
+      margin-top: 32px;
 
       a {
         @include font-sans($bold, $h8, $normal);
@@ -32,8 +47,6 @@
         }
       }
     }
-
-
   }
 
   &__copy {
@@ -52,7 +65,9 @@
         color: $color-purple;
       }
     }
+
+    @media screen and (min-width: 300px) and (max-width: 768px) {
+      text-align: center;
+    }
   }
-
-
 }
