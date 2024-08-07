@@ -53,9 +53,17 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      rel="preload"
       href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
-      rel="stylesheet"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
     />
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet"
+      />
+    </noscript>
     <link rel="stylesheet" href="./css/main.css" />
     <link
       rel="shortcut icon"
@@ -127,7 +135,7 @@
     <main id="main">
       <section id="about" class="about">
         <div class="about__content">
-          <h1 class="about__title">Sobre Mim</h1>
+          <h2 class="about__title">Sobre Mim</h2>
 
           <div class="about__content_wrapper">
             <div class="about__description">
@@ -167,7 +175,7 @@
 
             <div class="about__image">
               <img
-                src="./assets/images/caroline.jpg"
+                src="./assets/images/caroline.jpeg"
                 alt="Foto da Caroline Liborio da Silva a fundadora do Studio Lash Caroline"
               />
             </div>
@@ -186,10 +194,10 @@
       <section class="services" id="services">
         <div class="services__content">
           <div class="services__content_wrapper">
-            <h1 class="services__title">Serviços</h1>
+            <h2 class="services__title">Serviços</h2>
             <ul class="services__list">
               <li class="services__card">
-                <h2 class="services__subtitle">Extensão de Cílios</h2>
+                <h3 class="services__subtitle">Extensão de Cílios</h3>
                 <p>
                   É um procedimento estético que visa a aumentar o volume de
                   fios, sem a necessidade de utilizar maquiagem (ou cílios
@@ -211,7 +219,7 @@
               </li>
 
               <li class="services__card">
-                <h2 class="services__subtitle">Sobrancelha</h2>
+                <h3 class="services__subtitle">Sobrancelha</h3>
                 <p>
                   Transforme suas sobrancelhas com meu serviço especializado:
                   design personalizado, limpeza detalhada e henna para realçar e
@@ -229,7 +237,7 @@
               </li>
 
               <li class="services__card">
-                <h2 class="services__subtitle">Lash Lifting</h2>
+                <h3 class="services__subtitle">Lash Lifting</h3>
                 <p>
                   Realce seus cílios naturais com nosso serviço de Lash Lifting.
                   Com um procedimento seguro e eficaz, elevamos e alongamos seus
@@ -241,7 +249,7 @@
               </li>
 
               <li class="services__card">
-                <h2 class="services__subtitle">Depilação</h2>
+                <h3 class="services__subtitle">Depilação</h3>
                 <p>
                   Desfrute de uma pele macia e sem pelos por semanas com nossa
                   cera especial. Com atendimento personalizado, garanto uma
@@ -307,6 +315,7 @@
         </div>
 
         <iframe
+          title="Mapa da localização do Studio Lash Caroline"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.74968208596!2d-46.87330068849952!3d-23.54150396077575!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cf010f1ccaead9%3A0x4661722547d3af08!2sR.%20Jequitib%C3%A1%2C%20274%20-%20Parque%20Viana%2C%20Barueri%20-%20SP%2C%2006449-040!5e0!3m2!1spt-BR!2sbr!4v1714238045200!5m2!1spt-BR!2sbr"
           width="480"
           height="320"
@@ -342,6 +351,7 @@
     <!-- Google Tag Manager (noscript) -->
     <noscript>
       <iframe
+        title="Google Tag Manager Configuration"
         src="https://www.googletagmanager.com/ns.html?id=GTM-P2BXKSFK"
         height="0"
         width="0"
